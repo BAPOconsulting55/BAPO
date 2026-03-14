@@ -3,57 +3,65 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>BAPO Consulting — Lekasree (Dark)</title>
-  <meta name="description" content="BAPO Consulting — BA/PO training & US Healthcare coaching. Demo, Fundamentals, Masterclass, Advanced Accelerator."/>
+  <title>BAPO Consulting — Lekasree (Black & Gold)</title>
+  <meta name="description" content="BAPO Consulting — BA/PO training & US Healthcare coaching."/>
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#0f1724;
-      --muted:#9aa4b2;
-      --accent:#0ea5a4; /* teal accent */
-      --accent-2:#60a5fa; /* blue accent */
-      --glass: rgba(255,255,255,0.03);
+      --bg:#050505;            /* deep black background */
+      --card:#0b0b0b;          /* slightly lighter card */
+      --muted:#bdb8b0;         /* muted text */
+      --gold:#d4af37;          /* gold accent */
+      --gold-2:#b5912d;       /* darker gold */
+      --glass: rgba(255,255,255,0.02);
       --maxw:1100px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     *{box-sizing:border-box}
-    body{background:linear-gradient(180deg,#07101a 0%, #071a26 100%); color:#e6eef6; margin:0; padding:32px; display:flex; justify-content:center;}
+    body{background:var(--bg); color:#fff; margin:0; padding:32px; display:flex; justify-content:center;}
     .wrap{max-width:var(--maxw); width:100%;}
     header{display:flex; gap:16px; align-items:center; margin-bottom:18px;}
-    .brand{
-      width:84px; height:84px; border-radius:12px; background:linear-gradient(135deg,var(--accent-2),var(--accent));
-      display:flex; align-items:center; justify-content:center; color:#021023; font-weight:800; font-size:22px; box-shadow:0 8px 30px rgba(2,10,23,0.6);
+    .logo-svg{
+      width:84px; height:84px; border-radius:12px; background:linear-gradient(135deg,var(--gold),var(--gold-2));
+      display:flex; align-items:center; justify-content:center; box-shadow:0 8px 30px rgba(0,0,0,0.6);
     }
-    h1{margin:0; font-size:22px; color:#e6f0fb;}
+    .logo-svg svg{width:56px; height:56px; display:block;}
+    h1{margin:0; font-size:22px; color:#fff;}
     p.lead{margin:6px 0 0; color:var(--muted); font-size:14px;}
-    .banner{margin-top:14px; border-radius:12px; overflow:hidden; background:linear-gradient(90deg,rgba(14,165,164,0.08), rgba(96,165,250,0.06)); border:1px solid rgba(255,255,255,0.03);}
-    .banner img{width:100%; height:240px; object-fit:cover; display:block; filter:brightness(0.8) contrast(1.02);}
+    .banner{margin-top:14px; border-radius:12px; overflow:hidden; background:linear-gradient(90deg, rgba(212,175,55,0.03), rgba(181,145,45,0.02)); border:1px solid rgba(255,255,255,0.02);}
+    .banner img{width:100%; height:240px; object-fit:cover; display:block; filter:brightness(0.85) contrast(1.02);}
     .main{display:grid; grid-template-columns:1fr 360px; gap:18px; margin-top:18px;}
     @media(max-width:980px){ .main{grid-template-columns:1fr;} .side{order:2} }
-    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01)); border-radius:12px; padding:18px; margin-bottom:12px; border:1px solid rgba(255,255,255,0.02);}
+    .card{background:var(--card); border-radius:12px; padding:18px; margin-bottom:12px; border:1px solid rgba(255,255,255,0.02);}
     .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px;}
     @media(max-width:760px){ .grid{grid-template-columns:1fr;} }
-    h2,h3{color:#e9f3ff; margin:0 0 10px 0;}
+    h2,h3{color:#fff; margin:0 0 10px 0;}
     .meta{color:var(--muted); font-size:13px; display:flex; gap:8px; align-items:center;}
-    .tag{background:rgba(255,255,255,0.02); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:13px; border:1px solid rgba(255,255,255,0.02);}
-    .price{margin-left:auto; color:var(--accent); font-weight:700;}
-    .short{color:#d7e6fb; font-size:14px; margin:10px 0;}
-    .btn{background:linear-gradient(90deg,var(--accent-2),var(--accent)); color:#021023; border:none; padding:9px 12px; border-radius:10px; cursor:pointer; font-weight:700;}
-    .ghost{background:transparent; color:var(--accent-2); border:1px solid rgba(96,165,250,0.12); padding:8px 10px; border-radius:10px;}
+    .tag{background:rgba(212,175,55,0.06); color:var(--gold); padding:6px 10px; border-radius:999px; font-size:13px; border:1px solid rgba(212,175,55,0.06);}
+    .price{margin-left:auto; color:var(--gold); font-weight:700;}
+    .short{color:#e8e6e1; font-size:14px; margin:10px 0;}
+    .btn{background:linear-gradient(90deg,var(--gold),var(--gold-2)); color:#050505; border:none; padding:9px 12px; border-radius:10px; cursor:pointer; font-weight:700;}
+    .ghost{background:transparent; color:var(--gold); border:1px solid rgba(212,175,55,0.12); padding:8px 10px; border-radius:10px;}
     .details{display:none; border-top:1px dashed rgba(255,255,255,0.03); padding-top:12px; margin-top:12px; color:var(--muted);}
-    .services .service{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border-radius:10px; padding:12px; margin-bottom:12px; border:1px solid rgba(255,255,255,0.02);}
     label{font-size:13px; color:var(--muted);}
-    input,select,textarea{background:transparent; color:#e8f4ff; border:1px solid rgba(255,255,255,0.04); padding:10px; border-radius:8px; font-size:14px; width:100%;}
-    input::placeholder, textarea::placeholder{color:#6f7b86;}
-    .pill{display:inline-block; padding:8px 10px; border-radius:999px; background:rgba(255,255,255,0.02); color:var(--accent-2); text-decoration:none; border:1px solid rgba(255,255,255,0.02);}
-    .stars{color:#fbbf24; font-weight:700;}
+    input,select,textarea{background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.04); padding:10px; border-radius:8px; font-size:14px; width:100%;}
+    input::placeholder, textarea::placeholder{color:#7b766f;}
+    .pill{display:inline-block; padding:8px 10px; border-radius:999px; background:transparent; color:var(--gold); text-decoration:none; border:1px solid rgba(212,175,55,0.06);}
     footer{margin-top:18px; color:var(--muted); font-size:13px; text-align:center;}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">BAPO</div>
+      <div class="logo-svg" title="BAPO Consulting logo">
+        <!-- Simple BAPO logo (SVG) - replace with your own if preferred -->
+        <svg viewBox="0 0 100 100" xmlns="[w3.org](http://www.w3.org/2000/svg)" aria-hidden>
+          <rect x="6" y="6" width="88" height="88" rx="12" ry="12" fill="#fff" opacity="0.06"/>
+          <g fill="#050505">
+            <path d="M18 26h8v48h-8zM36 26h10c6 0 10 4 10 10 0 3-1 6-3 8-2 2-5 3-9 3h-8V26zm10 14h-2v10h2c3 0 5-1 6-3s1-4-1-6c-1-1-3-2-5-2z"/>
+            <path d="M68 26h8v48h-8z"/>
+          </g>
+        </svg>
+      </div>
       <div>
         <h1>Lekasree — Founder, BAPO Consulting</h1>
         <p class="lead">Business Analyst & Product Owner Transformation | US Healthcare Specialist | CSPO, CSM | 15+ yrs</p>
@@ -61,7 +69,7 @@
     </header>
 
     <div class="banner card">
-      <!-- Replace with your banner file in images/banner-dark.jpg -->
+      <!-- Replace with images/banner-blackgold.jpg -->
       <img alt="BAPO Consulting Banner" src="images/banner-placeholder-dark.jpg" />
     </div>
 
@@ -69,97 +77,83 @@
       <div>
         <div class="card">
           <h2>View My Services</h2>
-          <p class="meta">Practical, cohort-based training and career services focused on BA/PO transformation in US Healthcare.</p>
+          <p class="meta">Cohort-based training and career services for BA/PO transformation in US Healthcare.</p>
         </div>
 
         <div class="grid">
           <!-- Demo -->
-          <div class="card services">
-            <div class="service">
-              <h3>Demo Session — BA/PO Intro</h3>
-              <div class="meta"><span class="tag">30 mins</span><span class="tag">₹200</span><span class="price">Live Demo</span></div>
-              <p class="short">A focused live demo to experience course style, sample lesson, and Q&A before committing.</p>
-              <div style="display:flex; gap:8px;">
-                <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=Demo%20Booking'">Book Demo</button>
-                <button class="ghost" onclick="toggleDetails('d-demo')">Details</button>
-              </div>
-              <div class="details" id="d-demo">
-                <strong>Outline</strong>
-                <ul>
-                  <li>10-min overview & learning outcomes</li>
-                  <li>10-min teaching demo / exercise</li>
-                  <li>10-min Q&A & next steps</li>
-                </ul>
-                <strong>Deliverables</strong>
-                <ul><li>Recording on request</li><li>Suggested track</li></ul>
-              </div>
+          <div class="card">
+            <h3>Demo Session — BA/PO Intro</h3>
+            <div class="meta"><span class="tag">30 mins</span><span class="tag">₹200</span><span class="price">Live Demo</span></div>
+            <p class="short">30-minute live demo: sample lesson, Q&A, and next-step guidance.</p>
+            <div style="display:flex; gap:8px;">
+              <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=Demo%20Booking'">Book Demo</button>
+              <button class="ghost" onclick="toggleDetails('d-demo')">Details</button>
+            </div>
+            <div class="details" id="d-demo">
+              <strong>Outline</strong>
+              <ul>
+                <li>10-min overview & learning outcomes</li>
+                <li>10-min teaching demo / exercise</li>
+                <li>10-min Q&A & next steps</li>
+              </ul>
             </div>
           </div>
 
           <!-- Fundamentals -->
-          <div class="card services">
-            <div class="service">
-              <h3>BA/PO Fundamentals (Live)</h3>
-              <div class="meta"><span class="tag">4 weeks</span><span class="tag">₹5,000</span><span class="price">Live Cohort</span></div>
-              <p class="short">4-week hands-on program covering elicitation, user stories, stakeholder mapping and Agile essentials.</p>
-              <div style="display:flex; gap:8px;">
-                <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=Fundamentals%20Enrol'">Enrol</button>
-                <button class="ghost" onclick="toggleDetails('d-fund')">Details</button>
-              </div>
-              <div class="details" id="d-fund">
-                <strong>Modules</strong>
-                <ul>
-                  <li>Week 1: BA vs PO, stakeholder analysis</li>
-                  <li>Week 2: Elicitation, process flows, use cases</li>
-                  <li>Week 3: User stories, acceptance criteria</li>
-                  <li>Week 4: Agile ceremonies, roadmap & capstone</li>
-                </ul>
-                <strong>Deliverables</strong>
-                <ul><li>Slides & recordings</li><li>Templates & certificate</li></ul>
-              </div>
+          <div class="card">
+            <h3>BA/PO Fundamentals (Live)</h3>
+            <div class="meta"><span class="tag">4 weeks</span><span class="tag">₹5,000</span><span class="price">Live Cohort</span></div>
+            <p class="short">Practical 4-week live program covering elicitation, user stories, stakeholder mapping and Agile basics.</p>
+            <div style="display:flex; gap:8px;">
+              <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=Fundamentals%20Enrol'">Enrol</button>
+              <button class="ghost" onclick="toggleDetails('d-fund')">Details</button>
+            </div>
+            <div class="details" id="d-fund">
+              <strong>Modules</strong>
+              <ul>
+                <li>Week 1: BA vs PO, stakeholder analysis</li>
+                <li>Week 2: Elicitation, process flows, use cases</li>
+                <li>Week 3: User stories & acceptance criteria</li>
+                <li>Week 4: Agile ceremonies, roadmap & capstone</li>
+              </ul>
             </div>
           </div>
 
           <!-- Masterclass -->
-          <div class="card services">
-            <div class="service">
-              <h3>BA/PO Complete Masterclass</h3>
-              <div class="meta"><span class="tag">6–8 weeks</span><span class="tag">₹15,000</span><span class="price">Career Package</span></div>
-              <p class="short">Advanced BA/PO curriculum plus resume, LinkedIn optimization, mock interviews and interview coaching.</p>
-              <div style="display:flex; gap:8px;">
-                <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=Masterclass%20Enrol'">Enrol</button>
-                <button class="ghost" onclick="toggleDetails('d-master')">Details</button>
-              </div>
-              <div class="details" id="d-master">
-                <ul>
-                  <li>Resume & LinkedIn rewrite</li>
-                  <li>2 mock interviews with structured feedback</li>
-                  <li>Interview Q&A bank & coaching</li>
-                </ul>
-              </div>
+          <div class="card">
+            <h3>BA/PO Complete Masterclass</h3>
+            <div class="meta"><span class="tag">6–8 weeks</span><span class="tag">₹15,000</span><span class="price">Career Package</span></div>
+            <p class="short">Advanced curriculum + resume & LinkedIn optimization, mock interviews and interview coaching.</p>
+            <div style="display:flex; gap:8px;">
+              <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=Masterclass%20Enrol'">Enrol</button>
+              <button class="ghost" onclick="toggleDetails('d-master')">Details</button>
+            </div>
+            <div class="details" id="d-master">
+              <ul>
+                <li>Resume & LinkedIn rewrite</li>
+                <li>2 mock interviews with feedback</li>
+                <li>Interview Q&A bank & coaching</li>
+              </ul>
             </div>
           </div>
 
           <!-- Advanced Accelerator -->
-          <div class="card services">
-            <div class="service">
-              <h3>BA/PO Advanced Accelerator (AA Course)</h3>
-              <div class="meta"><span class="tag">12–14 weekends</span><span class="tag">₹25,000</span><span class="price">Immersive</span></div>
-              <p class="short">Immersive weekend cohort with personal coaching, AI-for-productivity, real scrum-team simulation and US Healthcare case studies.</p>
-              <div style="display:flex; gap:8px;">
-                <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=AA%20Course%20Reserve'">Reserve</button>
-                <button class="ghost" onclick="toggleDetails('d-aa')">Details</button>
-              </div>
-              <div class="details" id="d-aa">
-                <ul>
-                  <li>US Healthcare: payer/provider/RCM scenarios</li>
-                  <li>AI for BA/PO: prompt-driven requirements & automation</li>
-                  <li>Scrum simulation: sprints, backlog, demos</li>
-                  <li>Personal coaching (max 4 full-coaching slots)</li>
-                </ul>
-                <strong>Deliverables</strong>
-                <ul><li>Project artifacts, AI playbook, resume & LinkedIn priority support</li></ul>
-              </div>
+          <div class="card">
+            <h3>BA/PO Advanced Accelerator (AA Course)</h3>
+            <div class="meta"><span class="tag">12–14 weekends</span><span class="tag">₹25,000</span><span class="price">Immersive</span></div>
+            <p class="short">Immersive weekend cohort: personal coaching (limited), AI-for-productivity, real scrum-team simulation and US Healthcare case studies.</p>
+            <div style="display:flex; gap:8px;">
+              <button class="btn" onclick="location.href='mailto:contact@bapo-consulting.com?subject=AA%20Course%20Reserve'">Reserve</button>
+              <button class="ghost" onclick="toggleDetails('d-aa')">Details</button>
+            </div>
+            <div class="details" id="d-aa">
+              <ul>
+                <li>US Healthcare: payer/provider/RCM scenarios</li>
+                <li>AI for BA/PO: prompt-driven requirements & automation</li>
+                <li>Scrum simulation: sprints, backlog, demos</li>
+                <li>Personal coaching (max 4 full-coaching slots)</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -176,18 +170,6 @@
       </div>
 
       <aside class="side">
-        <div class="card">
-          <h3>Ratings & Reviews</h3>
-          <div style="display:flex; align-items:center; gap:10px;">
-            <div class="stars">★★★★★</div>
-            <div style="color:#dff7f6;"><strong>4.9</strong> (32 reviews)</div>
-          </div>
-          <div style="margin-top:10px; color:var(--muted); font-size:13px;">
-            <div><strong>Ravi M.</strong> — "AA course gave me real scrum experience and confidence."</div>
-            <div style="margin-top:8px"><strong>Sneha P.</strong> — "Resume rewrite and mocks helped me land interviews."</div>
-          </div>
-        </div>
-
         <div class="card">
           <h3>Book / Contact</h3>
           <form name="signup" method="POST" data-netlify="true">

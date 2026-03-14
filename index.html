@@ -1,120 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BAPO Consulting — Niranjan R</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BAPO Consulting — Services</title>
+  <meta name="description" content="BAPO Consulting — BA/PO training & US Healthcare domain coaching. Demo, Fundamentals, Masterclass, and Advanced Accelerator." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root{
+      --bg:#f7f8fb; --card:#fff; --accent:#0b6bf0; --muted:#6b7280;
+      --maxw:1100px; --radius:10px; --shadow:0 6px 18px rgba(11,107,240,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{background:var(--bg); color:#111; margin:0; padding:28px 16px; display:flex; justify-content:center;}
+    .wrap{max-width:var(--maxw); width:100%;}
+    header{display:flex; gap:16px; align-items:center; margin-bottom:18px;}
+    .logo{
+      width:78px; height:78px; border-radius:12px; background:linear-gradient(135deg,#0b6bf0,#0d8ff2);
+      display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:20px;
+      box-shadow:var(--shadow);
+    }
+    h1{margin:0; font-size:22px;}
+    p.lead{margin:6px 0 0; color:var(--muted); font-size:14px;}
+    .banner{margin-top:14px; border-radius:12px; overflow:hidden; box-shadow:var(--shadow); background:#eef5ff;}
+    .banner img{width:100%; height:220px; object-fit:cover; display:block;}
+    .main{display:grid; grid-template-columns:1fr 360px; gap:18px; margin-top:18px;}
+    @media(max-width:980px){ .main{grid-template-columns:1fr;} .side{order:2} }
+    .card{background:var(--card); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow); margin-bottom:12px;}
+    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px;}
+    @media(max-width:760px){ .grid{grid-template-columns:1fr;} }
+    .card h3{margin:0 0 8px; font-size:18px;}
+    .meta{display:flex; gap:8px; align-items:center; color:var(--muted); font-size:13px; margin-bottom:8px;}
+    .price{margin-left:auto; font-weight:700; color:var(--accent);}
+    .short{color:#222; font-size:14px; margin-bottom:12px;}
+    .btn{background:var(--accent); color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:600;}
+    .btn.ghost{background:transparent; color:var(--accent); border:1px solid rgba(11,107,240,0.12);}
+    .details{display:none; border-top:1px solid #eef1f5; padding-top:12px; margin-top:12px; color:#333;}
+    .tag{display:inline-block; background:#f1f8ff; color:#0553c7; padding:4px 8px; border-radius:999px; font-size:12px; margin-right:6px;}
+    .rating{display:flex; align-items:center; gap:8px; font-size:14px; color:#333;}
+    .stars{color:#f59e0b;}
+    .reviews{margin-top:8px; color:var(--muted); font-size:13px;}
+    form .row{display:flex; flex-direction:column; gap:6px; margin-bottom:10px;}
+    input, select, textarea{padding:8px; border-radius:8px; border:1px solid #e6eefb; font-size:14px; width:100%;}
+    button[type="submit"]{width:100%;}
+    footer{margin-top:18px; color:var(--muted); font-size:13px; text-align:center;}
+    .social{display:flex; gap:8px; justify-content:center; margin-top:10px;}
+    a.pill{display:inline-block; padding:8px 10px; border-radius:999px; background:#fff; color:var(--accent); border:1px solid #eef2ff; text-decoration:none;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">BAPO</div>
+      <div>
+        <h1>BAPO Consulting</h1>
+        <p class="lead">BA & PO transformation, US Healthcare domain training, and career acceleration (CSPO, CSM).</p>
+      </div>
+    </header>
 
-    :root {
-      --ink:       #0d0d0d;
-      --deep:      #111827;
-      --gold:      #b8933f;
-      --gold-lt:   #d4af6a;
-      --gold-pale: #f5ead6;
-      --cream:     #faf7f2;
-      --white:     #ffffff;
-      --muted:     #6b7280;
-      --border:    #e8e0d0;
-      --card-bg:   #ffffff;
-    }
+    <div class="banner card">
+      <img alt="BAPO Consulting Banner" src="images/banner-placeholder.jpg" />
+    </div>
 
-    html { scroll-behavior: smooth; }
+    <div class="main">
+      <div>
+        <div class="card">
+          <h2 style="margin-top:0">View My Services</h2>
+          <p class="lead" style="margin-bottom:6px">Choose a program to see details, deliverables and booking.</p>
+        </div>
 
-    body {
-      font-family: 'Jost', sans-serif;
-      background: var(--cream);
-      color: var(--ink);
-      overflow-x: hidden;
-    }
+        <div class="grid">
+          <!-- Demo -->
+          <div class="card">
+            <h3>Demo Session — BA/PO Intro</h3>
+            <div class="meta"><span class="tag">30 mins</span><span class="tag">₹200</span><span class="price">Live Demo</span></div>
+            <p class="short">30-minute live demo of our training style, sample lesson and Q&A. Try before you commit.</p>
+            <div style="display:flex;gap:8px">
+              <button class="btn" onclick="toggleDetails('d-demo')">View details</button>
+              <a class="btn ghost" href="mailto:contact@bapo-consulting.com?subject=Demo%20Session%20Booking">Book</a>
+            </div>
+            <div class="details" id="d-demo">
+              <strong>Outline</strong>
+              <ul>
+                <li>10 min overview & learning outcomes</li>
+                <li>10 min sample lesson / exercise</li>
+                <li>10 min Q&A and next steps</li>
+              </ul>
+              <strong>Deliverables</strong>
+              <ul>
+                <li>Recording on request</li>
+                <li>Recommended track & brochure</li>
+              </ul>
+            </div>
+          </div>
 
-    /* ─── NAV ─── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 48px;
-      background: rgba(13,13,13,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(184,147,63,0.2);
-    }
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px; font-weight: 700;
-      color: var(--gold-lt);
-      letter-spacing: 1px;
-    }
-    .nav-logo span { color: var(--white); }
-    .nav-links { display: flex; gap: 32px; }
-    .nav-links a {
-      font-size: 12px; font-weight: 500; letter-spacing: 1.5px;
-      text-transform: uppercase; color: rgba(255,255,255,0.65);
-      text-decoration: none; transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--gold-lt); }
-    .nav-cta {
-      background: var(--gold);
-      color: var(--white) !important;
-      padding: 9px 20px;
-      border-radius: 4px;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-    }
-    .nav-cta:hover { background: var(--gold-lt) !important; color: var(--ink) !important; }
+          <!-- Fundamentals -->
+          <div class="card">
+            <h3>BA/PO Fundamentals (Live)</h3>
+            <div class="meta"><span class="tag">4 weeks</span><span class="tag">₹5,000</span><span class="price">Live Cohort</span></div>
+            <p class="short">Hands-on 4-week live program: elicitation, user stories, stakeholder mapping and Agile basics.</p>
+            <div style="display:flex;gap:8px">
+              <button class="btn" onclick="toggleDetails('d-fund')">View details</button>
+              <a class="btn ghost" href="mailto:contact@bapo-consulting.com?subject=Fundamentals%20Booking">Enrol</a>
+            </div>
+            <div class="details" id="d-fund">
+              <strong>Modules</strong>
+              <ul>
+                <li>Week 1: BA vs PO, stakeholder analysis</li>
+                <li>Week 2: Elicitation, use cases, process flows</li>
+                <li>Week 3: User stories, acceptance criteria</li>
+                <li>Week 4: Agile ceremonies, roadmap, capstone</li>
+              </ul>
+              <strong>Deliverables</strong>
+              <ul>
+                <li>Slides & recordings, templates, certificate</li>
+              </ul>
+            </div>
+          </div>
 
-    /* ─── HERO ─── */
-    .hero {
-      min-height: 100vh;
-      background: var(--deep);
-      position: relative;
-      display: flex; align-items: center;
-      overflow: hidden;
-      padding: 120px 48px 80px;
+          <!-- Masterclass -->
+          <div class="card">
+            <h3>BA/PO Complete Masterclass</h3>
+            <div class="meta"><span class="tag">6–8 weeks</span><span class="tag">₹15,000</span><span class="price">Career Package</span></div>
+            <p class="short">Full upskilling + resume & LinkedIn optimization, mock interviews, and interview coaching.</p>
+            <div style="display:flex;gap:8px">
+              <button class="btn" onclick="toggleDetails('d-master')">View details</button>
+              <a class="btn ghost" href="mailto:contact@bapo-consulting.com?subject=Masterclass%20Booking">Enrol</a>
+            </div>
+            <div class="details" id="d-master">
+              <strong>Includes</strong>
+              <ul>
+                <li>Advanced BA/PO modules</li>
+                <li>Resume & LinkedIn rewrite</li>
+                <li>2 mock interviews with feedback</li>
+                <li>Interview Q&A bank & coaching</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Advanced Accelerator -->
+          <div class="card">
+            <h3>BA/PO Advanced Accelerator (AA Course)</h3>
+            <div class="meta"><span class="tag">12–14 weekends</span><span class="tag">₹25,000</span><span class="price">Immersive</span></div>
+            <p class="short">Weekend cohort, personal coaching (limited), AI-for-productivity and real scrum-team simulation.</p>
+            <div style="display:flex;gap:8px">
+              <button class="btn" onclick="toggleDetails('d-aa')">View details</button>
+              <a class="btn ghost" href="mailto:contact@bapo-consulting.com?subject=AA%20Course%20Booking">Reserve</a>
+            </div>
+            <div class="details" id="d-aa">
+              <strong>Highlights</strong>
+              <ul>
+                <li>US Healthcare case studies (Payer, Provider, RCM)</li>
+                <li>AI: prompt-driven requirements, test-case automation</li>
+                <li>Scrum simulation & real artifacts</li>
+                <li>Personal coaching (max 4 full-coaching slots)</li>
+              </ul>
+              <strong>Deliverables</strong>
+              <ul>
+                <li>Project artifacts, AI playbook, LinkedIn/resume support</li>
+                <li>Certificate & reference</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="side">
+        <div class="card">
+          <h3>Ratings & Reviews</h3>
+          <div class="rating"><div class="stars">★★★★★</div><div><strong>4.9</strong> (32 reviews)</div></div>
+          <div class="reviews">
+            <div><strong>Ravi M.</strong> — "The AA course gave me real scrum experience and confidence." </div>
+            <div style="margin-top:8px"><strong>Sneha P.</strong> — "Resume rewrite and mocks helped me land interviews."</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Book a Demo / Enrol</h3>
+          <form name="signup" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="signup" />
+            <div class="row"><label>Name</label><input type="text" name="name" required /></div>
+            <div class="row"><label>Email</label><input type="email" name="email" required /></div>
+            <div class="row"><label>Course</label>
+              <select name="course"><option>Demo Session</option><option>BA/PO Fundamentals</option><option>Complete Masterclass</option><option>Advanced Accelerator</option></select>
+            </div>
+            <div class="row"><label>Message</label><textarea name="message" rows="3" placeholder="Preferred dates / current role"></textarea></div>
+            <button class="btn" type="submit">Send enquiry</button>
+          </form>
+          <div style="margin-top:10px; text-align:center;">
+            <a class="pill" href="mailto:contact@bapo-consulting.com?subject=General%20Enquiry">Email</a>
+            <a class="pill" href="[linkedin.com](https://www.linkedin.com)" target="_blank" style="margin-left:6px">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Contact</h3>
+          <div style="color:var(--muted); font-size:14px">contact@bapo-consulting.com</div>
+          <div style="margin-top:8px; color:var(--muted); font-size:13px">15+ yrs US Healthcare • CSPO, CSM</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© BAPO Consulting — BA & PO Training. Use this site link on LinkedIn, posts, and emails.</div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDetails(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+      el.scrollIntoView({behavior:'smooth', block:'center'});
     }
-    .hero-bg {
-      position: absolute; inset: 0; pointer-events: none;
-      background:
-        radial-gradient(ellipse 70% 60% at 70% 40%, rgba(184,147,63,0.13) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(184,147,63,0.06) 0%, transparent 60%);
-    }
-    .hero-grid-lines {
-      position: absolute; inset: 0; pointer-events: none; overflow: hidden;
-      opacity: 0.04;
-    }
-    .hero-grid-lines::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-    .hero-inner {
-      position: relative; max-width: 1100px; margin: 0 auto; width: 100%;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
-    }
-    .hero-left { }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 11px; font-weight: 600; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--gold);
-      margin-bottom: 24px;
-    }
-    .hero-eyebrow::before {
-      content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
-    }
-    .hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(42px, 5.5vw, 72px);
-      font-weight: 700; line-height: 1.08;
-      color: var(--white); margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-    .hero-title em {
-      font-style: italic; color: var(--gold-lt);
-    }
-    .hero-subtitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(18px, 2.2vw, 26px);
-      font-weight: 400; font-style: italic;
-      color: rgba(255,255
+  </script>
+</body>
+</html>
